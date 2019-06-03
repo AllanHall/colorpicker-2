@@ -3,10 +3,16 @@ import React, { Component, useState } from 'react'
 export default function HSL() {
   //set state variables here
   const [hue, setHue] = useState(Math.floor(Math.random() * 360))
-  const [saturation, setSaturation] = useState(Math.floor(Math.random() * 50))
-  const [lightness, setLightness] = useState(Math.floor(Math.random() * 50))
+  const [saturation, setSaturation] = useState(Math.floor(Math.random() * 100))
+  const [lightness, setLightness] = useState(Math.floor(Math.random() * 100))
   const [alpha, setAlpha] = useState(Math.floor(Math.random() * 100) / 100)
-  // create functions for events here
+
+  const pickRandomColor = () => {
+    setHue(Math.floor(Math.random() * 360))
+    setSaturation(Math.floor(Math.random() * 100))
+    setLightness(Math.floor(Math.random() * 100))
+    setAlpha(Math.floor(Math.random() * 100) / 100)
+  }
 
   return (
     <>
@@ -70,7 +76,7 @@ export default function HSL() {
             <p>Lightness {lightness}</p>
             <p>Alpha {alpha}</p>
           </div>
-          <button className="button" onClick="">
+          <button className="button" onClick={() => pickRandomColor()}>
             Can Do
           </button>
         </main>
