@@ -2,10 +2,10 @@ import React, { Component, useState } from 'react'
 
 export default function HSL() {
   //set state variables here
-  const [hue, setHue] = useState(180)
-  const [saturation, setSaturation] = useState(50)
-  const [lightness, setLightness] = useState(50)
-  const [alpha, setAlpha] = useState(0.5)
+  const [hue, setHue] = useState(Math.floor(Math.random() * 360))
+  const [saturation, setSaturation] = useState(Math.floor(Math.random() * 50))
+  const [lightness, setLightness] = useState(Math.floor(Math.random() * 50))
+  const [alpha, setAlpha] = useState(Math.floor(Math.random() * 100) / 100)
   // create functions for events here
 
   return (
@@ -64,6 +64,15 @@ export default function HSL() {
               onChange={e => setAlpha(e.target.value)}
             />
           </div>
+          <div className="display-info">
+            <p>Hue {hue}</p>
+            <p>Saturation {saturation}</p>
+            <p>Lightness {lightness}</p>
+            <p>Alpha {alpha}</p>
+          </div>
+          <button className="button" onClick="">
+            Can Do
+          </button>
         </main>
       </section>
     </>
