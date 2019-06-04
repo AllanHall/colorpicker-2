@@ -1,7 +1,6 @@
 import React, { Component, useState } from 'react'
 
 export default function HSL() {
-  //set state variables here
   const [hue, setHue] = useState(Math.floor(Math.random() * 360))
   const [saturation, setSaturation] = useState(Math.floor(Math.random() * 100))
   const [lightness, setLightness] = useState(Math.floor(Math.random() * 100))
@@ -13,7 +12,7 @@ export default function HSL() {
     setLightness(Math.floor(Math.random() * 100))
     setAlpha(Math.floor(Math.random() * 100) / 100)
   }
-
+  // hooks are sweet
   return (
     <>
       <section className="pattern">
